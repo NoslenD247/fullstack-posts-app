@@ -1,0 +1,65 @@
+# Prueba Técnica - Full Stack Developer
+
+## Descripción del proyecto
+Este proyecto consiste en consumir una API externa de posts y expone un endpoint `/posts` agrupado por usuario.
+
+El **Frontend** se desarrolló con **React 18 y TailwindCSS**, muestra los posts en una tabla y cuenta con búsqueda dinámica por nombre.
+El **Backend** se desarrolló con **Node.js + Express**, se agregaron tests usando **Jest** y **Supertest**. Se utilizó **Swagger** para la documentación del API.
+
+---
+
+## Requisitos previos
+- Node.js ≥ 20  
+- npm ≥ 8  
+- Docker (opcional, si se quiere levantar con contenedores)
+
+---
+
+## Instalación y ejecución local
+
+### Backend
+```bash
+cd backend
+npm install         # Instala las dependencias.
+npm run dev         # Levanta la app en modo desarrollo con nodemon en localhost:3000.
+npm start           # Levanta la app en modo producción en localhost:3000.
+npm test            # Ejecuta los tests.
+```
+
+### Frontend
+```bash
+cd frontend
+npm install         # Instala las dependencias.
+npm run dev         # Levanta la app en modo desarrollo con vite en localhost:5173.
+npm start           # Levanta la app en modo producción en localhost:5173. 
+```
+
+### Docker Backend
+``` bash
+cd backend
+docker build -t backend-posts .         #Creación de la imagen docker, indicando que se usará el Dockerfile del directorio actual.
+docker run -p 3000:3000 backend-posts   # Levanta el contenedor backend-posts en el puerto 3000.
+```
+
+### Docker Frontend
+``` bash
+cd frontend
+docker build -t frontend-posts .            # Creación de la imagen docker, indicando que se usará el Dockerfile del directorio actual.
+docker run -p 5173:5173 frontend-posts      # Levanta el contenedor frontend-posts en el puerto 5173.
+```
+
+## Documentación de la API
+- http://localhost:3000/api-docs/           # Para visualizar la documentación de la API en la UI de Swagger.
+
+## Ejecución de Tests
+```bash
+cd backend
+npm test
+```
+
+## Qué verifican los tests:
+- GET /posts devuelve status 200
+- La respuesta es un array
+- Cada objeto contiene name y postCount
+
+
