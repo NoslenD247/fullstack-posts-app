@@ -31,7 +31,7 @@ npm test            # Ejecuta los tests.
 cd frontend
 npm install         # Instala las dependencias.
 npm run dev         # Levanta la app en modo desarrollo con vite en localhost:5173.
-npm start           # Levanta la app en modo producción en localhost:5173. 
+npm start           # Levanta la app en modo producción en localhost:4173. 
 ```
 
 ### Docker Backend
