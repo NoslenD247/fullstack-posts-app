@@ -1,4 +1,4 @@
-# Prueba Técnica - Full Stack Developer
+# Full Stack Web Application – React, Node.js & REST API
 
 ## Descripción del proyecto
 Este proyecto consiste en consumir una API externa de posts y expone un endpoint `/posts` agrupado por usuario.
